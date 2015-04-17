@@ -13,8 +13,8 @@
     },
     "authors": [
         {
-            "name": "Qiang Xue",
-            "email": "qiang.xue@gmail.com"
+            "name": "Buturlakin Andrey",
+            "email": "xezzus@gmail.com"
         }
     ],
     "require": {
@@ -23,7 +23,7 @@
     },
     "autoload": {
         "psr-4": {
-            "yii\\debug\\": ""
+            "yii\\pdo\\": ""
         }
     },
     "extra": {
