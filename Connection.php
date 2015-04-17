@@ -1,12 +1,26 @@
 <?php
 namespace yii\pdo;
 
-use yii\base\Component;
+use \PDO;
 
-class Connection extends Component {
+class Connection{
 
-    public function __construct($config=[]){
-        var_dump($config);
+    private $connection;
+
+    public function srv($name=null){
+
+        if(!isset($this->servers[$name])) die('This server pdo is not configure');
+
+        if(!$this->connection){
+            $this->connection = new PDO(
+                $this->servers[$name]['dsn'],
+                $this->servers[$name]['user'],
+                $this->servers[$name]['pass']
+            );
+            $this->connection->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+        }
+
+        return $this->connection;
     }
 
 }
