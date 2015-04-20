@@ -7,7 +7,7 @@ class Connection{
 
     private $connection;
 
-    public function createConnect(){
+    public function createConnection(){
 
         if(!isset($this->servers[$name])) die('This server pdo is not configure');
 
