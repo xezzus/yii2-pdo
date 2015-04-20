@@ -23,19 +23,19 @@ class Connection{
         return $this->connection;
     }
     
-    public functino fetch($sql){
+    public function fetch($sql){
         $cn = $this->createConnection();
         $q = $cn->query($sql);
         if($q) return $q->fetch();
     }
     
-    public functino fetchAll($sql){
+    public function fetchAll($sql){
         $cn = $this->createConnection();
         $q = $cn->query($sql);
         if($q) return $q->fetchAll();
     }
 
-    public functino exec($sql){
+    public function exec($sql){
         $cn = $this->createConnection();
         return $cn->exec($sql);
     }
