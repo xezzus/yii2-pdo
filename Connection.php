@@ -13,9 +13,9 @@ class Connection{
 
         if(!$this->connection){
             $this->connection = new PDO(
-                $this->['dsn'],
-                $this->['username'],
-                $this->['password']
+                $this->dsn,
+                $this->username,
+                $this->password
             );
             $this->connection->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
         }
